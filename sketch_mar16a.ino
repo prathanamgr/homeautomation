@@ -10,7 +10,13 @@ void setup()
 {
 Serial.begin(9600);
 Blynk.begin(auth, ssid, pass);
-Blynk.syncAll(); 
+pinMode(D2, OUTPUT);
+pinMode(D3, OUTPUT);
+pinMode(D4, OUTPUT);
+
+digitalWrite(D2, HIGH);
+digitalWrite(D3, HIGH);
+digitalWrite(D4, HIGH);
 }
 
 void loop()
